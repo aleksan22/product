@@ -50,21 +50,31 @@ modal.addEventListener('click', () => {
     $('.slider').slick({
       dots: true,
       slidesToShow: 3,
+      slidesToScroll: 3,
+      arrows: true,
       responsive: [
         {
           breakpoint: 1200,
             settings: {
             slidesToShow: 2,
+            slidesToScroll: 3,
+            arrows: true,
         }
         },
         {
           breakpoint: 920,
             settings: {
             slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
         }
         }
       ]
       
     });
   });
-  
+  $('a[href^="#"]').click(function(){
+    let link = $(this).attr("href");
+    $('body').animate({scrollTop: $(link).offset.top() + $('body').scrollTop()}, 1500);
+    return false;
+  })
