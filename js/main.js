@@ -51,14 +51,15 @@ modal.addEventListener('click', () => {
       dots: true,
       slidesToShow: 3,
       slidesToScroll: 3,
-      arrows: true,
+      arrows: false,
+      variableWidth: true,
       responsive: [
         {
           breakpoint: 1200,
             settings: {
             slidesToShow: 2,
             slidesToScroll: 3,
-            arrows: true,
+            arrows: false,
         }
         },
         {
